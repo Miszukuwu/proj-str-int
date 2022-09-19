@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="Utf-8">
+        <title>Cwiczenie 5</title>
+        <style>
+            body{
+                background-color: rgb(77, 75, 75);
+                color: white;
+                text-shadow: 1px 1px 2px black;
+            }
+            div{
+                background-color: rgb(3, 189, 189);
+                margin: 5px;
+            }
+            ul{
+                text-align: center;
+            }
+            ul>li{
+                border: solid black 1px;
+                padding: 5px;
+                display: inline;
+                list-style: none;
+                width: 1000px;  
+                text-align: center;
+                background-color: brown;
+            }
+            li>a
+            {
+                text-decoration: none;
+                color: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="https://tk.krakow.pl/">strona główna</a></li>
+            <li>O firmie</li>
+            <li><a href="https://www.youtube.com/watch?v=jeM9yRJwKl8">dla klienta</a></li>
+            <li><a href="http:\\onet.pl">Kontakt</a></li>
+        </ul>
+
+        <div>Lorem ipsum</div>
+        <div>Lorem ipsum</div>
+        <div>Lorem ipsum</div>
+        <div>Lorem ipsum</div>
+        <ol type="1">
+            <li>lista numerowana</li>
+            <li>lista numerowana</li>
+            <li>lista numerowana</li>
+            <ol type="a">
+                <li>zagnieżdżona </li>
+                <li>zagnieżdżona </li>
+                <ol type="i">
+                    <li>znowu zagnieżdżona</li>
+                    <li>znowu zagnieżdżona</li>
+                    <li>znowu zagnieżdżona</li>
+                    <li>znowu zagnieżdżona</li>
+                </ol>
+                <li>zagnieżdżona </li>
+            </ol>
+            <li>lista numerowana</li>
+            <li>lista numerowana</li>
+        </ol>
+        
+
+    </body>
+    
+    </html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cwiczenie 5</title>
+    </head>
+    <body>
+        <h1>Zespół Szkół Nr 1 im. św. Rafała Kalinowskiego: Technikum Komunikacyjne Nr 25</h1>
+        <ol type="I">
+            <li>Technikum Informatyczne</li>
+            <li>Technikum Logistyczne</li>
+            <li> technikum Elektroniczne</li>
+            <ul type="">
+                <li>1EL</li>
+                <li>2EL</li>
+                <li>3EL</li>
+                <li>4EL</li>
+            </ul>
+        </ol>
+
+
+
+
+
+    </body>
+</html>
