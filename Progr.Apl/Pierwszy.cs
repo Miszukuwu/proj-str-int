@@ -4,16 +4,16 @@ using System;
     {
         
         static void Main()
+        
         {
-            int x=1;
-            while(x<10)
+            int a=5;
+            int b=6;
+            string dzialanie = Console.ReadLine();
+            if(dzialanie == "+")
             {
-                if(x!=5)
-                {
-                    Console.Write(x + " ");
-                }
-                x++;
+                int wynik = a + b;
+                Console.WriteLine("Wynik Dodawania: " + wynik);
             }
-            Console.WriteLine();
         }
+
     }
