@@ -4,59 +4,98 @@
     <meta charset="UTF-8">
     <title>Wycieczki</title>
     <style>
+        @keyframes wejscie{
+            0% {opacity: 0%; top: 60px;}
+            100% {opacity: 100%; top: 0px;}
+        }
+        @keyframes kolory{
+            0% {color: rgb(20, 167, 167);}
+            25% {color: rgb(184, 12, 12);}
+            45% {color: rgb(9, 9, 187);}
+            65% {color: rgb(4, 91, 4);}
+            80% {color: rgb(99, 3, 99);}
+            100% {color: rgb(20, 167, 167);}
+        }
+        body{
+            background-color: rgb(181, 186, 149);
+        }
         table, tr, td, th{
             border: solid black 1px;
             border-collapse: collapse;
             padding: 3px;
             margin: auto;
             text-align: center;
-            font-size: 18px;
+            font-size: 125%;
             text-shadow: 1px 1px 1px rgb(187, 186, 186);
         }
         h1{
+            text-align: center;
             margin-bottom: 2px;
+            font-size: 260%;
         }
         h1>span{
             font-style: italic;
+            animation: kolory 3s;
+            animation-iteration-count: infinite;
+            animation-delay: -1s;
         }
-        div.u1{
+        h3.u1{
+            position: relative;
+            font-size: 130%;
+            text-align: center;
             font-weight: bolder;
             font-style: oblique;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            margin-top: 0px;
+            animation: wejscie 2s;
         }
         table{
-            background-color: rgb(230, 230, 230);
+            background-color: rgb(209, 223, 224);
+        }
+        tr:nth-child(even){
+            background-color: rgb(188, 203, 203);
         }
         tr>td{
             text-align: left;
         }
         tr.u1{
             font-weight: bold;
-            background-color: rgb(126, 216, 216); 
+            background-color: rgb(102, 234, 234); 
             font-size: large;
         }
         th{
-            font-size: x-large;
+            font-size: 125%;
             padding: 2px;
-            background-color: rgb(59, 206, 206);
+            background-color: rgb(78, 224, 224);
         }
         td.u2{
-            background-color: rgb(230, 230, 230);
             text-align: center;
             font-weight: bold;
             color: rgb(221, 71, 71);
-            text-shadow: 2px 2px 3px rgb(196, 195, 195);
-            font-size: x-large;
+            text-shadow: 2px 2px 3px rgb(163, 163, 163);
+            font-size: 125%;
         }
         td.u1{
             text-align: center;
-            font-size: larger;
+            font-size: 125%;
+        }
+        .footer {
+        border-top: solid 2px black;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(95, 95, 95);
+        color: white;
+        text-align: left;
+        padding: 25px;
+        font-size: 105%;
         }
     </style>
 </head>
 <body>
     <h1>Tanie wycieczki dzięki firmie "<span> <u>Wycieczex</u> </span>"</h1>
-    <div class="u1">Zapewniamy najlepsze usługi wycieczkowe w Polsce od 1939 r.</div>
+    <h3 class="u1">Zapewniamy najlepsze usługi wycieczkowe w Polsce od 1939 r.</h3>
     
     <div>
       <table>
@@ -75,7 +114,7 @@
             <td class="u1">7 dni</td>
             <td class="u2">12/36</td>
             <td>3 159 zł/za os.</td>
-            <td><a href="Egipt.html"><img src="egipt1.png" alt="Egipt"></td>
+            <td><a href="Egipt.html"><img src="egipt1.jpg" alt="Egipt"></td>
         </tr>
         <tr>
             <td>Wycieczka do <u>Francji</u></td>
@@ -99,6 +138,10 @@
             <td><a href="Chorwacja.html"><img src="chorwacja1.jpg" alt="Chorwacja"></td>
         </tr>
     </table>  
+    </div>
+    <div class="footer">
+        Autor: Aleksander Owsiński <br>
+        Prawa autorskie: lolol
     </div>
     
 </body>
