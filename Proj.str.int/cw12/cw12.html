@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Aleksander Owsiński">
+    <title>Zasady Fizyki i Chemi</title>
+    <style>
+        @keyframes wejscie {
+            0%{opacity: 0; right: -450px;}
+            100%{opacity: 1; right: 0px; }
+        }
+        body{
+            font-size: larger;
+            background-image: url(tlo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        h1{
+            text-align: center;
+        }
+        div{
+            position: relative;
+            margin-right: 0px;
+            animation: wejscie 2s;
+            animation-delay: -0,5s;
+            border: solid 2px black;
+            box-shadow: 1px 1px 5px black;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            font-weight: bold;
+        }
+        img{
+            margin-top: 3px;
+            margin-left: 39px;
+        }
+        div{
+            background-color: rgb(223, 223, 223);
+        }
+    </style>
+<body>
+    <h1>Zasady Fizyki i Chemi</h1>
+    <dl>
+        <div>
+            <dt>Pierwsza zasada termodynamiki</dt>
+            <dd>Energię wewnętrzną ciała można zmienić jedynie dzięki oddziaływaniu z otoczeniem – przez wykonanie pracy lub przekazanie ciepła.</dd>
+            <img src="Termodynamika.png" alt="Termodynamika">
+        </div>
+        <div>
+            <dt>Fizyka kwantowa</dt>
+            <dd>Przestrzeń definiuje materię a nie materia przestrzeń. teoria praw ruchu obiektów poszerzająca zakres mechaniki na sytuacje, dla których przewidywania mechaniki klasycznej nie sprawdzały się.</dd>
+            <img src="Kwantowa.jpg" alt="Fizyka Kwantowa">
+        </div>
+    </dl>
+</body>
+</html>
