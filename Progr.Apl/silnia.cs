@@ -1,22 +1,13 @@
 using System;
 
-    class Program
+class program
+{
+    static void Main()
     {
-        static void Main()
-        {
-        Console.Clear();
-        int y = 0;
-        int w = 1;
-        int wynik = 1;
-        Console.Write("Podaj liczbe n: ");
-        int n = Convert.ToInt32(Console.Read());
-        while(y<n)
-        {
-            wynik = w * wynik;
-            w++;
-            y++;
-        }
-        Console.WriteLine("Silnia liczby n wynosi: " + wynik);
-        Console.ReadKey();
-        }
+        int n=5;
+        int w=1;
+        for(int x=1;x<=n;x++)
+            w=w*x;
+        Console.WriteLine(w);
     }
+}
