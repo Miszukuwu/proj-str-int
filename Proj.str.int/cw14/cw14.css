@@ -2,7 +2,9 @@ Header{
     border: solid 2px black;
 }
 header>img{
-    float: right;
+   height: 100px;
+   width: 100px;
+   float: right;
 }
 h1{
     text-align: center;
@@ -34,13 +36,20 @@ div.footer{
     justify-content:space-between;
     position:static;
 }
-article{
+main{
+    display: flex;
+}
+#u1{
     display: flex;
     flex-wrap: wrap;
-    text-align: left;
     margin-top: 2px;
-    margin-right: 51%;
+    margin-right: 30%;
     border-right: 2px solid rgb(124, 67, 14);
+}
+#u2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 span{
     display: flex;
@@ -52,32 +61,17 @@ span>section{
 section{
     margin: 2px;
     margin-right: 4px;
-    border: 2px solid brown;
 }
-div>img{
-    height: 100px;
-    width: 100px;
-    float: right;
+article>img{
+    height: 200px;
+    width: 200px;
+    padding-bottom: 4px;
+    position: relative;
+    right: 75%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer{
     margin-top: 10px;
     color: blue;
     font-size: larger;
     text-align: center;
-    border: 2px solid darkblue;
 }
