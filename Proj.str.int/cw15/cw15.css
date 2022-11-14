@@ -1,0 +1,11 @@
+.container{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+label{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 5px;
+}
