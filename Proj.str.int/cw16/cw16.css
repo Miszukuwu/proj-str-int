@@ -1,0 +1,32 @@
+.container{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+label{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 5px;;
+}
+.line{
+    margin: 20px;
+}
+input[type=button]{
+    padding: 8px;
+    width: 128px;
+}
+input[type=text]{
+border: none;
+border-bottom: 1px gray solid;
+}
+input[type=text]:focus{
+    outline: none;
+    border: none;
+    border-bottom: 1px gray solid;
+}
+input[type=number]{
+    width: 7%;
+    border: 1px solid;
+    border-radius: 3px;
+}
