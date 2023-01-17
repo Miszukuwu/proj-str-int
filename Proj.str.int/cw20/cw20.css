@@ -39,12 +39,43 @@
     }
 }
 .card{
+    position:inherit;
+    left: 50%;
+    right: 50%;
     width: 300px;
     height: 400px;
     border: solid black 1px;
     box-shadow: 10px 10px 10px grey;
     border-radius: 10px;
     text-align: center;
+    font-weight: bold;
+    animation: ShowCards 1s;
+    animation-fill-mode: forwards;
+    font-size: 1.5em;
+
+}
+.Dates{
+    animation: ShowDates 2s;
+    scale: 1;
+}
+@keyframes ShowCards{
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes ShowDates{
+    0%{
+        scale: 0;
+    }
+    50%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
 }
 .year{
     margin-top: 30px;
