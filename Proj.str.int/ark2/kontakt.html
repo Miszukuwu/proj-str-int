@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Usługi Informatyczne</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="icon" type="image/x-icon" href="./logo.png">
+</head>
+<body>
+<div class="container">
+    <div class="logo"><img src="logo.png" alt="logo firmy"></div>
+    <div class="menu">
+        <a href="index.html">O nas</a>
+        <a href="uslugi.html">Usługi</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div class="baner"><img src="animacja.gif"></div>
+    <main>
+        <hr>
+        <h2>Kontakt</h2>
+        <table>
+            <form action="submit" method="get">
+            <tr>
+                <td>Imię: </td>
+                <td><input type="text" name="imie" id="imie"></td>
+            </tr>
+            <tr>
+                <td>Nazwisko: </td>
+                <td><input type="text" name="nazwisko" id="nazwisko"></td>
+            </tr>
+            <tr>
+                <td>E-mail: </td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Usługa: </td>
+                <td><textarea name="usluga" id="usluga" cols="20" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="zgoda" id="zgoda"> Zapoznałam/em się z regulaminem</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="reset" value="Resetuj"><input type="button" value="Wyślij" id="wyslij"></td>
+            </tr>
+            </form>
+        </table>
+        <span id="wynik"></span>
+        <hr>
+    </main>
+    <footer>
+        Autor Strony: <b>123456789</b>
+    </footer>
+</div>
+<script>
+    document.querySelector("#wyslij").onclick = function()
+    {
+        var imie = document.getElementById("imie").value;
+        var nazwisko = document.getElementById("nazwisko").value;
+        var email = document.getElementById("email").value;
+        var usluga = document.getElementById("usluga").value;
+        var zgoda = document.getElementById("zgoda").checked;
+        if (zgoda == true)
+            document.getElementById("wynik").innerHTML = imie.toUpperCase() + " " + nazwisko.toUpperCase() + "<br> Treść twojej sprawy: " + usluga + "<br> Na podany e-mail zostanie wysłana oferta";
+        if (zgoda == false)
+            document.getElementById("wynik").innerHTML = "Musisz zapoznać się z regulaminem.";
+
+    }
+</script>
+</body>
+</html>

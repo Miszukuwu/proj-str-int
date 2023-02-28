@@ -1,0 +1,49 @@
+body{
+    background-color: #EEEEEE;
+}
+.container{
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+.logo, .menu,footer{
+    background-color: #c0c0c0;
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.logo {
+    display: block;
+    float: left;
+    height: 100px;
+    width: 400px;
+}
+.menu {
+    display: inline-block;
+    height: 100px;
+    width: 600px;
+    color: #555555;
+    margin: 50px;
+    font-size: 200%;
+}
+.baner{
+    background-color: #DDDDDD;
+    height: 200px;
+}
+main{
+    margin: 50px;
+}
+footer{
+    text-align: right;
+}
+a{
+    text-decoration: none;
+}
+hr{
+    background-color: #C0C0C0;
+    width: 70%;
+    height: 2px;
+}
+table{
+    text-align: left;
+}
