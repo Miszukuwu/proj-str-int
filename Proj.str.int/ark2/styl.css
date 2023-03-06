@@ -6,7 +6,7 @@ body{
     margin: auto;
     text-align: center;
 }
-.logo, .menu,footer{
+.up,footer{
     background-color: #c0c0c0;
     height: 100px;
     padding-top: 10px;
@@ -23,7 +23,7 @@ body{
     height: 100px;
     width: 600px;
     color: #555555;
-    margin: 50px;
+    text-decoration: none;
     font-size: 200%;
 }
 .baner{
