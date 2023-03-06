@@ -1,0 +1,65 @@
+body{
+    background-color: dimgray;
+    color: white;
+    text-align: center;
+}
+.Adding{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#addNew{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+#addNew>img{
+    float: right;
+    height: 16px;
+    width: 16px;
+    border: 1px black solid;
+    padding: 10px;
+}
+#addNew>span{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 5px;
+}
+#newTitle{
+    border: 1px solid black;
+    width: 50%;
+}
+#newTitle:placeholder-shown {
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    margin-top: 50px;
+}
+li{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: #181818 2px 2px 6px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+li>span{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+li>img{
+    height: 16px;
+    width: 16px;
+    border: 1px black solid;
+    padding: 10px;
+}
+.buttons{
+
+}
