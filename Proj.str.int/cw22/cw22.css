@@ -12,7 +12,8 @@ body{
     padding: 10px;
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 15%;
+    border-radius: 5px;
 }
 #addNew>img{
     float: right;
@@ -38,6 +39,7 @@ body{
 ul{
     list-style-type: none;
     margin-top: 50px;
+    text-align: center;
 }
 li{
     background-color: white;
@@ -50,14 +52,31 @@ li{
     margin-bottom: 15px;
     display: flex;
     justify-content: flex-end;
-    gap: 25%;
+    align-content: flex-end;
 }
 li>span{
+    text-align: center;
     margin-top: auto;
     margin-bottom: auto;
+    align-self: center;
+    margin-left: auto;
+    margin-right: fill;
 }
 .buttons{
     margin-right: 15px;
+    align-self: flex-end;
+}
+#addNew:hover{
+    background-color: #adeaad;
+    cursor: pointer;
+}
+#del:hover{
+    background-color: lightcoral;
+    cursor: pointer;
+}
+#edit:hover{
+    background-color : #e2a73f;
+    cursor: pointer;
 }
 li>.buttons>img{
     height: 16px;

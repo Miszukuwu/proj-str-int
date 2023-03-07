@@ -8,7 +8,7 @@ const edit = "<img src='media/edit.png' id='edit'>";
 const del = "<img src='media/delete.png' id='del'>";
 function generBooks(books)
     {
-        let html  = "<ul>";
+        let html = "<ul>";
         for(let b of books){
             html += `<li><span class="text">${b}</span> <span class="buttons">${edit} ${del}</span></li>`;
         }
