@@ -1,0 +1,48 @@
+menu{
+    overflow: hidden;
+    background-color: #333;
+    padding: 1.5em;
+}
+
+a {
+    font-size: 125%;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+.menu:hover{
+    background-color: #c02222;
+}
+.podmenu {
+    float: left;
+    overflow: hidden;
+}
+.podmenu-linki {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: red;
+    width: 100%;
+    z-index: 100;
+    padding: 1em;
+}
+
+.podmenu-linki a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.podmenu-linki a:hover {
+    background-color: #eee;
+    color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.podmenu:hover .podmenu-linki {
+    display: block;
+}
