@@ -1,0 +1,155 @@
+@font-face {
+    font-face-name: Poppins;
+    src: url("../media/Poppins-Regular.ttf");
+}
+@keyframes fadein {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+@keyframes slideIn {
+    0%{transform: translate(calc(100vw),0)}
+    100%{transform: translate(0,0)}
+}
+:root{
+    --textColor: #ffffff;
+    --backgroundColor: #181122;
+    --primaryColor: #561e9f;
+    --secondaryColor: #180a2e;
+    --accentColor: 184, 66, 139;
+}
+body{
+    margin: 0;
+    color: var(--backgroundColor);
+    font-family: 'Poppins', sans-serif;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    background: #e4e5fb;
+    padding: 5px;
+    font-size: 14px;
+    width: auto;
+    margin: auto 40px;
+    height: 80vh;
+    border: 1px solid #ddd;
+    color: #333;
+    transition: margin-left .5s;
+    animation: fadein 2s;
+    overflow: scroll;
+}
+#topbar{
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    justify-content: end;
+    align-items: center;
+}
+#menubtn{
+    display: inline-block;
+    background-color: rgba(0,0,0,0);
+    margin-right: 45px;
+    padding: 5px;
+    border: 1px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#menubtn:hover{
+    background-color: rgba(var(--accentColor),0.5);
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(var(--accentColor),0.5);
+}
+#menubtn:active{
+    transition: background-color 0s;
+    background-color: rgba(var(--accentColor),0.8);
+}
+#menubtn img{
+    float: left;
+    width: 45px;
+    height: 45px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--secondaryColor);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+.title{
+    text-transform: uppercase;
+}
+.panel{
+    width: 80%;
+    margin: 15px auto 15px;
+    padding: 5px;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+#editor{
+    padding: 5px;
+    margin: 5px;
+    margin-left: 0;
+    font-size: 14px;
+    width: 90%;
+    border: 1px solid #888;
+}
+article{
+    border: transparent 1px solid;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px var(--secondaryColor);
+    padding: 2vh;
+    margin: 5px;
+    background-color: white;
+    color: black;
+    animation-duration: 1s;
+    animation-name: slideIn, fadein;
+    animation-timing-function: ease-out;
+    transition: background-color 0.2s;
+}
+article img{
+    aspect-ratio: auto;
+    width: auto;
+    height: 100%;
+    max-height: 300px;
+    max-width: 100%;
+}
+article:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
