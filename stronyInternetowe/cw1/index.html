@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // document.write("Hello World!");
+        // alert("Witaj na mojej stronie");
+        // let d = confirm("Czy jesteś uczniem?");
+        // if (d){
+        //     alert("Witam ucznia na mojej stronie");
+        // } else {
+        //     alert("Witaj na stronie, szkoda że nie jesteś uczniem");
+        // }
+        // let nazwisko = prompt("Podaj swoje nazwisko: ");
+        // document.write(nazwisko+" witaj na mojej stronie!");
+        // for(let i = 1; i <= 100; i++){
+        //     if(i%2==0){
+        //         document.write(` <b>${i}</b> `);
+        //     } else {
+        //         document.write(i);
+        //     }
+        // }
+        // Wykonaj zestawienie kwot otrzymanych przez alę w ciągu d dni
+        // Jeżeli 1-ego dnia dostała k złotch
+        // a każdego nastepnego dostaje o 3 złoty więcej niż dnia poprzedniego
+        // (d i k podaje użytkownik)
+        let d = prompt("Podaj ilość dni: ");
+        let k = prompt("Podaj kwotę początkową: ");
+        let kwota = 0;
+        let suma = k*1;
+        for (let i = 0; i < d; i++){
+            document.write("Dzień "+(i+1)+". "+suma+" zł + "+kwota+" zł"+" => "+(suma+kwota)+" zł<br>");
+            suma+=kwota;
+            kwota+=3;
+        }
+    </script>
+</body>
+</html>

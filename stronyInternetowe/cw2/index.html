@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+</head>
+<body>
+<script>
+    // Zadanie 1:
+    // od użytkownika pobierz kwotę któą dysponuje w banku
+    // okres oszczędzania podany w latach również pobieramy od użytkownika
+    // stałe oprocentowanie i wynosi 4% w skali rocznej
+    // z kapitalizacją pół roczną
+    // wykonaj zestawienie stanu osczędności obejmujący każde pół rocze w całym okresie osczędzania
+    // let kwota = prompt("Podaj kwotę w banku: ")*1;
+    // let okres = prompt("Podaj okres oszczędzania w latach: ")*1;
+    // document.write("Początkowa kwota: "+kwota+" zł Okres oszczędzania "+okres+" lat<br>");
+    // for (let i = 0; i < okres * 2; i++) {
+    //     kwota += kwota*0.02;
+    //     document.write("Półrocze nr "+(i+1)+" => "+kwota+" zł<br>");
+    // }
+    // Zadanie 2:
+    // Napisz skrypt który w zależności od wyboru działania
+    // będzie wykonywał i pokazywał działanie na dwóch liczb rzeczywistych pobranych od użytkownika
+    // function potega(p, w) {
+    //     let result = 1;
+    //     for (let i = 0; i < w; i++) {
+    //         result = result*p;
+    //     }
+    //     return result;
+    // }
+    // function nwd(a, b) {
+    //     while (a!=b){
+    //         if (a>b){
+    //             a -= b;
+    //         } else {
+    //             b -= a;
+    //         }
+    //     }
+    //     return a;
+    // }
+    // let a = prompt("Podaj pierwszą liczbę: ")*1;
+    //
+    // let b = prompt("Podaj drugą liczbę: ")*1;
+    // let znak = prompt("Podaj znak działania (+, -, *, /, ^, nwd): ").toUpperCase();
+    // let result;
+    // switch (znak) {
+    //     case '+':
+    //         result = a + b;
+    //         document.write("Wynik działania "+a+" "+znak+" "+b+" wynosi: " + result);
+    //         break;
+    //     case '-':
+    //         result = a - b;
+    //         document.write("Wynik działania "+a+" "+znak+" "+b+" wynosi: " + result);
+    //         break;
+    //     case '*':
+    //         result = a * b;
+    //         document.write("Wynik działania "+a+" "+znak+" "+b+" wynosi: " + result);
+    //         break;
+    //     case '/':
+    //         if (b == 0) {
+    //             document.write("Nie można dzielić przez zero!");
+    //         } else {
+    //             result = a / b;
+    //             document.write("Wynik działania "+a+" "+znak+" "+b+" wynosi: " + result);
+    //         }
+    //         break;
+    //     case '^':
+    //         result = potega(a,b);
+    //         document.write("Wynik potęgi "+a+" do "+b+" wynosi: "+result);
+    //         break;
+    //     case 'NWD':
+    //         result = nwd(a,b);
+    //         document.write("Wynik NWD("+a+", "+b+") wynosi: "+result);
+    //         break;
+    //     default:
+    //         document.write("Podano zły znak!");
+    //         break;
+    // }
+    // document.write("<br>");
+    // Pobierz od użytkownika jedną liczbe naturalną i wypisz wsyzstkie liczby od 1 do pobranej wartości (włącznie)
+    // pogrub te znich które sa przyste i oblicz ich sume
+    // let a = prompt("Podaj liczbe naturalną: ")*1;
+    // let sum = 0
+    // for (let i = 1; i <= a; i++) {
+    //     if (i%2 == 0){
+    //         document.write("<b>"+i+"</b> ");
+    //         sum += i;
+    //     } else {
+    //         document.write(i+" ");
+    //     }
+    // }
+    // document.write("<br> Suma liczb parzystych: "+sum);
+    // Zadanie 3:
+    // Pobierz nazwisko od użytkownika
+    // zadaj pytanie
+    // jeśli tak to poproś o wpisanie nazwy szkoły
+    // jesli nie to wypisz komunikat "Strona nie jest przeznaczona dla ciebie"
+    let nazwisko = prompt("Podaj nazwisko: ");
+    let czyUczen = confirm("Czy jesteś uczniem?")
+    if (czyUczen){
+        let szkola = prompt("Podaj nazwę szkoly: ")
+        document.write("Szkoła: "+szkola);
+    } else {
+        alert("Strona nie jest przeznaczona dla ciebie");
+    }
+</script>
+</body>
+</html>
