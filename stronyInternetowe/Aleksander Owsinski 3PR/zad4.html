@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 4</title>
+</head>
+<body>
+<script>
+    let zakres = parseInt(prompt("Podaj a: "));
+    for (let i = 1; i < zakres; i++) {
+        if (czyKwadrat(i)){
+            document.write("<b>"+i+"</b> ");
+        } else {
+            document.write(i+" ");
+        }
+    }
+    function czyKwadrat(liczba) {
+        for (let i = 0; i < liczba; i++) {
+            if (i*i==liczba){
+                return true;
+            }
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

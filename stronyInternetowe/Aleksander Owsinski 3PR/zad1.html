@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 1</title>
+</head>
+<body>
+<script>
+    let dni = prompt("Podaj liczbę dni: ")*1;
+    let kwota = 5;
+    let alaSuma = 0;
+    let basiaSuma = 0;
+    basiaSuma += kwota;
+    for (let i = 1; i <= dni; i++) {
+        if (i%2==0){
+            document.write("Dzień "+i+". Ala dostała "+kwota+" zł<br>");
+            alaSuma+=kwota;
+        } else {
+            document.write("Dzień "+i+". Basia dostała "+kwota+" zł<br>");
+            basiaSuma+=kwota;
+        }
+        kwota = kwota + kwota*0.03;
+    }
+    document.write("Suma pieniędzy Basi wynosi: "+basiaSuma+" zł <br>");
+    document.write("Suma pieniędzy Ala wynosi: "+alaSuma+" zł <br>");
+</script>
+</body>
+</html>

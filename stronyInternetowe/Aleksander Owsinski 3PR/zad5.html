@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 5</title>
+</head>
+<body>
+<p style="text-align: center">
+    <script>
+        let n = parseInt(prompt("Podaj liczbę klepsydr: "));
+        let k = parseInt(prompt("Podaj liczbę gwiazdek w poodstawie: "));
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < k-1; j++) {
+                for (let l = 0; l < k-j; l++) {
+                    document.write("* ");
+                }
+                document.write("<br>")
+            }
+            for (let j = k-1; j >= 0; j--) {
+                for (let l = 0; l < k-j; l++) {
+                    document.write("* ");
+                }
+                document.write("<br>")
+            }
+            document.write("<br>")
+        }
+    </script>
+</p>
+</body>
+</html>

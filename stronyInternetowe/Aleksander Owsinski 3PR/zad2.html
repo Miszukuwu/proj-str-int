@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 2</title>
+</head>
+<body>
+<script>
+    let liczba = prompt("Podaj liczbę: ")*1;
+    let iloczynDzielnikow = 1;
+    for (let i = 1; i < liczba; i++) {
+        if (liczba%i==0){
+            iloczynDzielnikow = iloczynDzielnikow*i;
+        }
+    }
+    if (iloczynDzielnikow==liczba){
+        document.write("Liczba "+liczba+" jest liczbą doskonałą");
+    } else {
+        document.write("Liczba "+liczba+" nie jest liczbą doskonałą");
+    }
+</script>
+</body>
+</html>

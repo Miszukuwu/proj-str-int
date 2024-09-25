@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 3</title>
+</head>
+<body>
+<script>
+    let bokA = parseFloat(prompt("Podaj bok a (Dodatni): "));
+    while (bokA <= 0){
+        bokA = parseFloat(prompt("Podaj liczbę dodatnią: "));
+    }
+
+    let bokB = parseFloat(prompt("Podaj bok b (Dodatni): "));
+    while (bokB <= 0){
+        bokB = parseFloat(prompt("Podaj liczbę dodatnią: "));
+    }
+    let wybor = prompt('Pole czy obwód? (pole, obwod)');
+    if (wybor == "pole"){
+        let pole = bokA*bokB;
+        document.write("Pole prostokąta wynosi: "+pole);
+    } else if (wybor == "obwod" || wybor == "obwód") {
+        let obwod = bokA*2+bokB*2;
+        document.write("Obwód prostokąta wynosi: "+obwod);
+    }
+</script>
+</body>
+</html>
