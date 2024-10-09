@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablice</title>
+</head>
+<body>
+<script>
+    // let test = a => b => {
+    //     return a-b;
+    // }
+    // let test1 = test(5);
+    // document.write(test1(5)+"<br>");
+    // document.write(test1(2)+"<br>");
+    // document.write(test1(3)+"<br>");
+    // document.write(test1(4)+"<br>");
+    function writeArray() {
+        for (let i in array) {
+            document.write(i + " ");
+        }
+    }
+
+    <!--    20 elementów od 1 do 9-->
+    let tab1 = new Array();
+    for (let i = 0; i < 20; i++) {
+        tab1[i] = Math.ceil(Math.random() * 100);
+    }
+    document.write(tab1);
+    document.write("<br>");
+    tab1.reverse();
+    document.write(tab1);
+    document.write("<br>");
+    tab1.sort((element1, element2) => element1 - element2);
+    // tab1.sort((element1, element2) => {
+    //     return element1 - element2;
+    // });
+    //
+    // let funkcjaSort = (element1) => {
+    //     (element2) =>{
+    //         return element1 - element2;
+    //     }
+    // }
+    //
+    // tab1.sort(funkcjaSort);
+
+    document.write(tab1);
+    document.write("<br>");
+    // let liczba1 = prompt("Podaj liczbę ")*1;
+    let liczba1 = 20*1;
+    let liczba1Index = tab1.indexOf(liczba1);
+    if (liczba1Index !== -1){
+        document.write("Liczba "+liczba1+" jest na pozycji "+liczba1Index);
+    } else {
+        document.write("Liczba "+liczba1+" nie znajduje się w tablicy");
+    }
+    document.write("<br>");
+
+    document.write("stara tablica: "+tab1);
+    document.write("<br>");
+    let tab2 = tab1.slice(5, 11);
+    document.write("nowa tablica: "+tab2);
+    document.write("<br>");
+    tab1.splice(5,6);
+    document.write("stara tablica po usunięciu: "+tab1);
+    document.write("<br>");
+    tab1.push(333, 444, 555);
+    document.write("stara tablica po dodaniu: "+tab1);
+    document.write("<br>");
+    document.write("rozmiar tablicy wynosi: " +tab1.length)
+    document.write("<br>");
+    let tab1Join = tab1.join("");
+    document.write(tab1Join);
+    document.write("<br>");
+    for (let i in tab1Join) {
+        if (tab1Join[i] == 2){
+            document.write(tab1Join[i].sup())
+        } else {
+            document.write(tab1Join[i]);
+        }
+    }
+
+</script>
+</body>
+</html>
