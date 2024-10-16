@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ćwiczenie 5</title>
+</head>
+<body>
+    <script>
+    let wyraz = "alamapsakotaikanarka";
+    let colors = ["red", "black", "yellow", "blue", "green"]
+    for (let i = 0; i < wyraz.length; i++) {
+        document.write(wyraz[i].fontcolor(colors[Math.round(Math.random()*(colors.length-1))]));
+    }
+    document.write("<br>");
+
+    for (let i = 0; i < wyraz.length; i++) {
+        if(i%2==0){
+            document.write(wyraz[i].sup());
+        } else {
+            document.write(wyraz[i].sub());
+        }
+    }
+    document.write("<br>");
+    // Pobierz napis od użytkownika
+    // Pozbywamy się spacji, przecinka i kropki
+    // Cały napis wielkimy literami
+    // Wielkości znaków od najmniejszego do najwiekszego i tak dalej
+    // let temp = prompt("Podaj wyraz: ");
+    let temp = "ala ma kota, psa i kota";
+    let wyraz2 = "";
+    for (let i = 0; i < temp.length; i++) {
+        switch(temp[i]){
+            case ' ':
+            case ',':
+            case '.':
+            break;
+            default:
+                wyraz2 += temp[i];
+                break;
+        }
+    }
+    let currentFontSize = 1;
+    let ascending = true;
+    for (let i = 0; i < wyraz2.length; i++) {
+        document.write(wyraz2[i].fontsize(currentFontSize).toUpperCase());
+        if (currentFontSize < 7 && ascending){
+            currentFontSize++;
+        } else {
+            ascending = false;
+            currentFontSize--;
+            if (currentFontSize == 1)
+                ascending = true;
+        }
+    }
+    document.write("<br>");
+    let produkty = Array();
+    produkty['maslo'] = 3.99;
+    produkty['chleb'] = 5.49;
+    produkty['pomidor'] = 1.99;
+    produkty['kalafior'] = 2.49;
+    produkty['ziemnaki'] = 1.49;
+    let tab = new Array(5);
+    for (let i = 0; i < tab.length; i++){
+        tab[i] = Math.floor(Math.random()*20+1);
+    }
+    let i = 0;
+    let sum2 = 0;
+    for (let produkt in produkty){
+        let sum1 = produkty[produkt]*tab[i];
+        document.write(produkt+" "+produkty[produkt]+" zł, "+tab[i]+" sztuk, Razem: "+sum1+" zł <br>");
+        i++;
+        sum2 += produkty[produkt];
+    }
+    document.write(sum2+" zł");
+    </script>
+</body>
+</html>
