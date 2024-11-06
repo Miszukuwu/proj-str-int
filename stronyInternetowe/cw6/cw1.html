@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>ćwiczenie 1</title>
+</head>
+<body>
+<script>
+// Tablica asocjsasyjne gdzie klucze to nazwiska a wartości to średnie ocen wypełnij danymi pobranymi od użytkownika
+// wyświetl tablicę
+// w postaci nazwisko + " średnia ocen:" + srednia
+// znajdz ucznia o najwyzszej sredniej
+
+    let numberOfStudents = prompt("Ile chcesz dodać uczniów?: ")*1;
+    let students = [];
+    for (let i = 0; i < numberOfStudents; i++) {
+        let nazwisko = prompt("Podaj nazwisko ucznia nr "+(i+1)+": ");
+        let srednia = parseFloat(prompt("Podaj średnią ucznia nr "+(i+1)+": "))
+        students[nazwisko] = srednia;
+    }
+    for (let student in students) {
+        document.write(student + " średnia ocen: "+students[student] + "<br>");
+    }
+
+</script>
+</body>
+</html>

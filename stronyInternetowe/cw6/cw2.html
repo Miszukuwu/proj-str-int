@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Cwiczenie2</title>
+</head>
+<body>
+<script>
+    // Wprowadź dowolny łancuch i wypisać go tak by pierwszy i ostatni znak był możliwie najwyszszą czcionką
+    let wyraz = prompt("Podaj wyraz: ");
+    for (let i = 0; i < wyraz.length; i++) {
+        if (i==0||i==wyraz.length-1){
+            document.write(wyraz.at(i).fontsize(7));
+        } else {
+            document.write(wyraz.at(i).fontsize(1));
+        }
+    }
+</script>
+</body>
+</html>

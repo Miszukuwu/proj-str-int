@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalendarz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="banner-first">Moja strona WWW</div>
+        <div id="banner-second">Witam cię na mojej stronie</div>
+    </header>
+    <main>
+        Dzisiaj jest
+    <script>
+        let a = 2;
+        if (a==1){
+            document.getElementById("banner-first").innerHTML = "Strona WWW Aleksander Owsiński";
+        } else {
+            document.getElementById("banner-first").innerHTML = "Właścicielem strony jest Aleksander Owsiński";
+        }
+        document.getElementById("banner-first").style.backgroundColor = "blue";
+        let date = new Date();
+        let month = date.getMonth();
+        let monthString;
+        switch (month){
+            case 0:
+                monthString = "styczeń";
+                break;
+            case 1:
+                monthString = "luty";
+                break;
+            case 2:
+                monthString = "marzec";
+                break;
+            case 3:
+                monthString = "kwiecień";
+                break;
+            case 4:
+                monthString = "maj";
+                break;
+            case 5:
+                monthString = "czerwiec";
+                break;
+            case 6:
+                monthString = "lipiec";
+                break;
+            case 7:
+                monthString = "sierpień";
+                break;
+            case 8:
+                monthString = "wrzesień";
+                break;
+            case 9:
+                monthString = "pażdziernik";
+                break;
+            case 10:
+                monthString = "listopad";
+                break;
+            case 11:
+                monthString = "grudzień";
+                break;
+        }
+        let weekDay = date.getDay();
+        let weekDayString;
+        switch (weekDay){
+            case 0:
+                weekDayString = "niedziela";
+                break;
+            case 1:
+                weekDayString = "poniedziałek";
+                break;
+            case 2:
+                weekDayString = "wtorek";
+                break;
+            case 3:
+                weekDayString = "środa";
+                break;
+            case 4:
+                weekDayString = "czwartek";
+                break;
+            case 5:
+                weekDayString = "piątek";
+                break;
+            case 6:
+                weekDayString = "sobota";
+                break;
+        }
+        document.write(weekDayString + " ");
+        if (date.getDate()<10){
+            document.write("0");
+        }
+        document.write(date.getDate() + " ");
+        document.write(monthString + " ");
+        document.write(date.getFullYear() + "<br>");
+        if (date.getHours()<10){
+            document.write("0")
+        }
+        document.write(date.getHours()+":");
+        if (date.getMinutes()<10){
+            document.write("0");
+        }
+        document.write(date.getMinutes()+"<br>");
+        let eveDate = new Date(2024,11,24);
+        let daysLeft = Math.ceil((Date.parse(eveDate)-Date.parse(date))/1000/60/60/24);
+        document.write("Wigilia jest za "+daysLeft+" dni");
+    </script>
+    </main>
+</body>
+</html>
