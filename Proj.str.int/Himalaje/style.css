@@ -1,0 +1,22 @@
+body{
+    background-image: url("IMG/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: helvetica,SansSerif;
+}
+table{
+    background-color: #b3b3b3;
+    text-align: center;
+}
+th,td,tr{
+    border: solid 1px black;
+}
+img{
+    width: 120px;
+}
+footer{
+    text-align: center;
+}
+div{
+    height: 100px;
+}

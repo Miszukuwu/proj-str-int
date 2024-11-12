@@ -1,5 +1,7 @@
 *{
     margin: 0;
+    /*outline: solid 1px red;*/
+    font-family: Cambria;
 }
 body{
     display: flex;
@@ -9,13 +11,84 @@ body{
     height: 100vh;
     width: 100vw;
     color: white;
+    text-wrap: nowrap;
+    text-align: center;
 }
 main{
     background-color: gray;
-    width: 100vw;
-    max-width: 240px;
-    height: 50vh;
-    max-height: 380px;
+    height: 100%;
+    max-height: 65vh;
+    aspect-ratio: 3 / 4;
     border-radius: 10px;
-   box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 10px black;
+    display: flex;
+    flex-direction: column;
+    font-size: 5vh;
+    justify-content: space-between;
+    overflow: hidden;
+
+    text-shadow: 1px 1px 3px black;
+
+    background-color: lightblue;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: slide-in 1s;
+
+}
+#banner{
+    padding-top: 2vh;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    font-size: 0.9em;
+}
+@keyframes slide-in {
+    0%{
+        opacity: 0;
+        translate: 0 -40px;
+    }
+    100%{
+        opacity: 1;
+        translate: 0;
+    }
+}
+#day-container{
+    background-color: rgba(0,0,0,0.5);
+    border: solid transparent 1px;
+    border-radius: 100%;
+    width: fit-content;
+    padding: 3vh;
+    aspect-ratio: 1 / 1;
+    backdrop-filter: blur(5px);
+    /*filter: drop-shadow(1px 1px 1px rgba(0,0,0,1)); Firefox weird implementation*/
+    box-shadow: 0px 0px 2vh 0.5vh rgba(0,0,0,0.5);
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    transition: scale 300ms;
+}
+#day-container:hover{
+    scale: 1.1;
+}
+#day{
+    font-size: 2.4em;
+}
+#week-day{
+    font-size: 0.8em;
+    margin: 0 -0.5vh 2vh;
+}
+#footer{
+    font-size: 0.6em;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+}
+.pad{
+    padding: 1vh;
+}
+.red{
+    color: red;
 }
