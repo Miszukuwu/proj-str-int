@@ -1,38 +1,41 @@
 const monthsName = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 const weekDayNames = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
-let currentDate = new Date(2024, 9, 22);
+let currentDate = new Date(2024, 9, 24);
 let month = currentDate.getMonth();
 let day = currentDate.getDate();
 let weekDay = currentDate.getDay();
 let year = currentDate.getFullYear();
 let birthdayDate = new Date(year, 9, 23);
-if (currentDate > birthdayDate){
-    birthdayDate.setFullYear(year+1);
+if (currentDate > birthdayDate) {
+    birthdayDate.setFullYear(year + 1);
 }
-let leftToBday = Math.ceil((Date.parse(birthdayDate)-Date.parse(currentDate))/1000/60/60/24);
+let leftToBday = Math.ceil((Date.parse(birthdayDate) - Date.parse(currentDate)) / 1000 / 60 / 60 / 24);
 
 let bannerElement = document.getElementById("banner");
 let dayElement = document.getElementById("day");
 let weekDayElement = document.getElementById("week-day");
 let footerElement = document.getElementById("footer");
 
-bannerElement.innerHTML = monthsName[month] + " " +year;
+bannerElement.innerHTML = monthsName[month] + " " + year;
 dayElement.innerHTML = day;
 weekDayElement.innerHTML = weekDayNames[weekDay];
 
-footerElement.innerHTML = "Urodziny mam za "+ leftToBday;
-if (leftToBday>1){
-    footerElement.innerHTML += " dni";
-} else if (leftToBday==1) {
-    footerElement.innerHTML += " dzień";
+footerElement.innerHTML = "Do moich urodzin został";
+if (leftToBday == 1) {
+    footerElement.innerHTML += ": " + leftToBday + " dzień";
+} else if (leftToBday <= 4) {
+    footerElement.innerHTML += "y: " + leftToBday + " dni";
+} else if (leftToBday > 1) {
+    footerElement.innerHTML += "o: " + leftToBday + " dni";
 }
-if (weekDay == 0){
+
+if (weekDay == 0) {
     dayElement.className += "red-font";
     weekDayElement.className += "red-font";
 }
 
 let mainElement = document.querySelector("main");
-switch (month+1){
+switch (month + 1) {
     case 12:
     case 1:
     case 2:
@@ -54,7 +57,8 @@ switch (month+1){
         mainElement.style.backgroundImage = "url(media/autumn.jpg)";
         break;
 }
-if (leftToBday == 0){
+
+if (leftToBday == 0) {
     mainElement.style.backgroundImage = "url(media/birthday.jpg)";
     footerElement.innerHTML = "Dziś są moje Urodziny!"
 }
