@@ -15,12 +15,12 @@ body{
     text-align: center;
 }
 main{
-    background-color: gray;
+    opacity: 0;
     height: 100%;
     max-height: 65vh;
     aspect-ratio: 3 / 4;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 15px black;
     display: flex;
     flex-direction: column;
     font-size: 5vh;
@@ -28,13 +28,12 @@ main{
     overflow: hidden;
 
     text-shadow: 1px 1px 3px black;
-
-    background-color: lightblue;
     background-position: 50% 60%;
     background-repeat: no-repeat;
     background-size: cover;
-    animation: slide-in 1s;
 
+    animation: slide-in 1s;
+    animation-fill-mode: forwards;
 }
 #banner{
     padding-top: 2vh;
@@ -45,7 +44,7 @@ main{
 @keyframes slide-in {
     0%{
         opacity: 0;
-        translate: 0 -40px;
+        translate: 0 -5vh;
     }
     100%{
         opacity: 1;
@@ -89,6 +88,6 @@ main{
 .pad{
     padding: 1vh;
 }
-.red{
-    color: red;
+.red-font{
+    color: #fd3a3a;
 }

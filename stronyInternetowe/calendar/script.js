@@ -1,6 +1,6 @@
 const monthsName = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 const weekDayNames = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
-let currentDate = new Date(2026, 10, 25);
+let currentDate = new Date(2024, 9, 22);
 let month = currentDate.getMonth();
 let day = currentDate.getDate();
 let weekDay = currentDate.getDay();
@@ -20,15 +20,15 @@ bannerElement.innerHTML = monthsName[month] + " " +year;
 dayElement.innerHTML = day;
 weekDayElement.innerHTML = weekDayNames[weekDay];
 
-footerElement.innerHTML = "Urodziny mam za: "+ leftToBday;
+footerElement.innerHTML = "Urodziny mam za "+ leftToBday;
 if (leftToBday>1){
     footerElement.innerHTML += " dni";
 } else if (leftToBday==1) {
     footerElement.innerHTML += " dzień";
 }
 if (weekDay == 0){
-    dayElement.className += "red";
-    weekDayElement.className += "red";
+    dayElement.className += "red-font";
+    weekDayElement.className += "red-font";
 }
 
 let mainElement = document.querySelector("main");
@@ -51,7 +51,7 @@ switch (month+1){
     case 9:
     case 10:
     case 11:
-        mainElement.style.backgroundImage = "url(media/autumn.jfif)";
+        mainElement.style.backgroundImage = "url(media/autumn.jpg)";
         break;
 }
 if (leftToBday == 0){
