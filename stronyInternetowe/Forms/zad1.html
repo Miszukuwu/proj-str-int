@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularze 1</title>
+</head>
+<body>
+<form name="form1">
+    <label for="nazwisko">Podaj nazwisko</label>
+    <input type="text" name="lastname" id="nazwisko">
+    <button type="button" onclick="wypisz()">Wyślij</button>
+</form>
+<p id="message"></p>
+<script>
+    function wypisz() {
+        // Za pomocą id:
+        // let lastname = document.getElementById("nazwisko").value;
+        // Za pomocą name:
+        let lastname = document.form1.lastname.value;
+        // let lastname = document.forms[0].elements[0].value;
+        // let lastname = document.forms["form1"].elements["nazwisko"].value;
+        // let lastname = document.forms.namedItem("form1").elements.namedItem("nazwisko").value;
+
+        document.getElementById("message").innerHTML = lastname + " witaj na mojej stronie";
+    }
+</script>
+</body>
+</html>

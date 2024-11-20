@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularze 2</title>
+</head>
+<body>
+<!--    Podaj wymiary pokoju: szerokosc, wysokosc i dlugosc
+        wyznacz ilosc puszek farby potrzebna do pomalowania pokoju
+        bez podlogi, jeżeli jedna puszka farby wystarcza na pomalowanie 7 m^2
+
+ -->
+<h2>Wyznaczanie ilości puszek farby</h2>
+<form name="farba">
+    <label for="width">Podaj szerokość:</label>
+    <input type="number" name="width" id="width"><br>
+    <label for="length">Podaj długość:</label>
+    <input type="number" name="length" id="length"><br>
+    <label for="height">Podaj wysokość</label>
+    <input type="number" name="height" id="height"><br>
+    <label>Czy wynajmujesz do malowania firmę?</label><br>
+    <label for="firmaTak">Tak</label>
+    <input type="radio" name="firma" id="firmaTak"><br>
+    <label for="firmaNie">Nie</label>
+    <input type="radio" name="firma" id="firmaNie"><br>
+    <label for="kredyt">Czy korzystasz z kredytu</label>
+    <input type="checkbox" name="kredyt" id="kredyt"><br>
+    <button type="button" onclick="oblicz()">Oblicz</button>
+</form>
+<p id="message"></p>
+<script>
+    function oblicz(){
+        let width = document.farba.width.value;
+        let height = document.farba.height.value;
+        let length = document.farba.length.value;
+        let czyFirma = document.getElementById("firmaTak").checked;
+        let czyKredyt = document.farba.kredyt.checked;
+
+        let polePokoju = (height*length)*2+(height*width)*2 + width*length;
+
+        let iloscFarby = Math.ceil(polePokoju/7);
+        polePokoju = Math.round(polePokoju*100)/100
+
+        let cost = iloscFarby*50;;
+        if (czyFirma){
+            cost += polePokoju*5;
+        }
+        if (czyKredyt){
+            cost += cost*0.15
+        }
+        let message = document.getElementById("message");
+        message.innerHTML = "Powierzchnia do pomalowania wynosi: "+polePokoju+" m<sup>2</sup><br>";
+        message.innerHTML += "Do pomalowania pokoju potrzeba "+iloscFarby+ " puszek farby<br>";
+        message.innerHTML += "Czy firma? "+((czyFirma)?"Tak":"Nie")+"<br>";
+        if (czyFirma){
+            message.innerHTML += "Koszt farby: "+iloscFarby*50+" zł, Robocizna: "+polePokoju*5+" zł<br>";
+            message.innerHTML += "Łączny koszt malowania: "+cost+" zł<br>";
+        } else {
+            message.innerHTML += "Koszt farby: "+iloscFarby*50+" zł<br>";
+        }
+        message.innerHTML += "Czy korzystasz z kredytu? "+((czyKredyt)?"Tak":"Nie")+"<br>";
+    }
+</script>
+</body>
+</html>
