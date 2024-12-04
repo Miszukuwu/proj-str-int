@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze 2</title>
+</head>
+<body>
+<!-- Pobierz formularz w którym pobierzemy szerokość i długość działki -->
+<!-- Używając radio button pytamy się czy ogrodzenie wykonuje obsługa -->
+<!-- Wybór materiałów wykonujemy używając listy jednokrotnego wyboru -->
+<!-- Składającego się z opcji, "drewno", "kamień", "metal", "cegła" -->
+<!-- Przycisk oblicz, który wyznacza cenę wykonania ogrodzenia, (drewno = 100zł/m, kamień = 150, metal = 300, cegła = 200) -->
+<!-- Firma dodaje 100zł za wykonanie m -->
+<form name="ogrodzenie">
+    <label for="length">Długość działki: </label>
+    <input type="number" name="length" id="length"><br>
+    <label for="width">Szerokość działki: </label>
+    <input type="number" name="width" id="width"><br>
+    <label>Czy wykonuje firma?</label><br>
+    <label for="true">Tak</label>
+    <input type="radio" name="firma" id="true" value="1">
+    <label for="false">Nie</label>
+    <input type="radio" name="firma" id="false" value="0" checked><br>
+    <label for="material">Materiał: </label>
+    <select name="material" id="material">
+    </select><br>
+    <label for="content">Co znajduje się na działce</label><br>
+    <select name="content" id="content" multiple>
+    </select><br>
+    <label for="settlement">Gdzie mieszkasz?</label>
+    <select name="settlement" id="settlement">
+        <option value="Wśii">Wieś</option>
+        <option value="Miasteczku">Miasteczko</option>
+        <option value="Mieście do 100 tys.">Miasto do 100 tys.</option>
+        <option value="Mieście powyżej 100 tys.">Miasto powyżej 100 tys.</option>
+    </select><br>
+    <button type="button" onclick="calculate()">Oblicz</button>
+</form>
+<p id="result"></p>
+<script>
+    let materials = {"Drewno": 100, "Kamień": 150, "Metal": 300, "Cegła": 200};
+    let materialElement = document.ogrodzenie.material;
+    for (let material in materials) {
+        materialElement.innerHTML += "<option value='" + material + "'>" + material + "</option>";
+    }
+    let contents = ["Dom", "Grill", "Boisko", "Altanka", "Garaż", "Plac zabaw"];
+    let contentElement = document.ogrodzenie.content;
+    for (let content of contents) {
+        contentElement.innerHTML += "<option value='"+content+"'>"+content+"</option>";
+    }
+    function calculate() {
+        let length = document.ogrodzenie.length.value;
+        let width = document.ogrodzenie.width.value;
+        let circumference = length * 2 + width * 2;
+        let czyFirma = document.ogrodzenie.firma.value;
+        let material = document.ogrodzenie.material.value;
+        console.log(material)
+        let materialPrice = materials[material];
+        let contents = document.ogrodzenie.content.selectedOptions;
+        let settlement = document.ogrodzenie.settlement.value;
+
+        let price = circumference * materialPrice + circumference * 100 * czyFirma;
+        let resultElement = document.getElementById("result");
+        resultElement.innerHTML = "Obwód działki: " + circumference + " m<br>";
+        resultElement.innerHTML += "Czy wykonuje firma? ";
+        if (czyFirma == 1) {
+            resultElement.innerHTML += "Tak <br>";
+        } else {
+            resultElement.innerHTML += "Nie <br>";
+        }
+        resultElement.innerHTML += "Wybrany materiał: " + material + ", "+materials[material]+" zł/m <br>";
+        resultElement.innerHTML += "Pełna cena ogrodzenia: " + price + " zł<br>";
+        resultElement.innerHTML += "Zawartość działki: <br>";
+        let temp = "<ul>";
+        for (let content of contents) {
+            temp += "<li>"+content.value+"</li>";
+        }
+        temp += "</ul>";
+        if (contents.length <= 0){
+            temp = "Pusta<br>";
+        }
+        resultElement.innerHTML += temp;
+        resultElement.innerHTML += "Mieszkasz na/w "+settlement+"<br>";
+    }
+</script>
+</body>
+</html>
