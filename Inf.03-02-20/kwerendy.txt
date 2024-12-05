@@ -1,0 +1,1 @@
+Zapytanie 1: SELECT `model`, `kolor`, `stan` FROM `samochody` WHERE `rocznik`>2010-01-01;

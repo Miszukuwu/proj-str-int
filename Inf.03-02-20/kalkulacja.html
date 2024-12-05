@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasza stacja paliw</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <header>
+        <h2>Witamy na stacji paliw!</h2>
+    </header>
+    <article>
+        <div class="left">
+            <a href="index.html"><img src="home.png"></a><br>
+            <a href="kalkulacja.html"><img src="znak.png"></a>
+        </div>
+        <div class="right">
+            <img src="samochod.png" alt="grafika: samochód">
+        </div>
+    </article>
+    <main>
+        <h2>Oblicz, ile litrów musisz zatankować</h2>
+        <form name="fuelForm">
+            <label for="distance">dystans do przejechania w km:</label><br>
+            <input type="number" name="distance" id="distance"><br>
+            <label for="burning">spalanie samochodu w 1/100km:</label><br>
+            <input type="number" name="burning" id="burning"><br>
+            <button type="button" onclick="calculate()">Oblicz</button><br>
+        </form>
+        <p id="result"></p>
+    </main>
+    <footer>
+        <div class="left">
+            <p>Stronę opracował: 1234567890</p>
+        </div>
+        <div class="right">
+            <a href="kwerendy.txt">Ty pobierzesz zapytania</a>
+        </div>
+    </footer>
+    <script>
+        function calculate(){
+            let distance = document.fuelForm.distance.value;
+            let burning = document.fuelForm.burning.value;
+            let fuelNeeded = (distance/100)*burning;
+            document.getElementById("result").innerHTML = "Potrzebujesz: "+fuelNeeded+" litrów paliwa";
+        }
+    </script>
+</body>
+</html>
