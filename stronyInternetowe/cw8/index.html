@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="banner" onmouseover="napisIn()" onmouseout="napisOut()">Ala ma kota</h3>
+    <img src="media/zazuNormal.jpg" alt="Zazu Cat Normal" id="cat-image">
+    <div id="time"></div>
+    <script>
+        function napisIn() {
+            document.getElementById('banner').innerHTML = "Ala ma psa";
+        }
+        function napisOut(){
+            document.getElementById('banner').innerHTML = "Ala ma kota";
+        }
+        const monthsName = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
+        const weekDayNames = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
+        const catImages = ["zazuNormal.jpg", "zazuGreen.jpg", "zazuWatermelon.jpg"];
+        let i = 0;
+        function updateTime(){
+            let currentDate = new Date();
+            let month = currentDate.getMonth();
+            let day = currentDate.getDate();
+            let weekDay = currentDate.getDay();
+            let year = currentDate.getFullYear();
+            let hour = currentDate.getHours();
+            let minutes = currentDate.getMinutes();
+            let seconds = currentDate.getSeconds();
+            let timeElement = document.getElementById('time');
+            timeElement.innerHTML = weekDayNames[weekDay]+" ";
+            timeElement.innerHTML += day+" ";
+            timeElement.innerHTML += monthsName[month]+" ";
+            timeElement.innerHTML += year+" ";
+            timeElement.innerHTML += hour+":"+minutes+":"+seconds;
+            if (i>2){
+                i = 0;
+            }
+            document.getElementById('cat-image').src = "media/"+catImages[i++];
+            console.log("balls");
+            setTimeout(updateTime, 1000);
+        }
+        updateTime();
+    </script>
+</body>
+</html>
