@@ -4,12 +4,14 @@
 header{
     background-color: black;
     color: white;
+    padding: 10px;
 }
 #banner{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 10px;
 }
 #logo{
     width: 20%;
@@ -19,9 +21,24 @@ menu{
     flex-direction: row;
     justify-content: space-around;
 }
+menu li{
+    list-style: none;
+    padding: 10px;
+}
 menu a{
     text-decoration: none;
     color: lightgray;
+    padding: inherit;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    transition: 0.2s;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+menu a:hover{
+    color: black;
+    background-color: lightgray;
+    box-shadow: 0px 0px 5px lightgray;
 }
 main{
     display: flex;
