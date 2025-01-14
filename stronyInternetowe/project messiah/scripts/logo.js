@@ -1,4 +1,4 @@
-const logos = ['omnissiah_logo.png', 'omnissiah_logo2.webp']
+const logos = ['controller.png', 'pc.png', 'switch.png']
 let i = 0;
 function logoUpdate(){
     if (i == logos.length) {

@@ -1,6 +1,7 @@
 const monthsName = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 const weekDayNames = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
-let currentDate = new Date(2024, 9, 24);
+
+let currentDate = new Date();
 let month = currentDate.getMonth();
 let day = currentDate.getDate();
 let weekDay = currentDate.getDay();
@@ -11,6 +12,7 @@ if (currentDate > birthdayDate) {
 }
 let leftToBday = Math.ceil((Date.parse(birthdayDate) - Date.parse(currentDate)) / 1000 / 60 / 60 / 24);
 
+let mainElement = document.getElementById("main");
 let bannerElement = document.getElementById("banner");
 let dayElement = document.getElementById("day");
 let weekDayElement = document.getElementById("week-day");
@@ -30,11 +32,10 @@ if (leftToBday == 1) {
 }
 
 if (weekDay == 0) {
-    dayElement.className += "red-font";
-    weekDayElement.className += "red-font";
+    dayElement.classList.add("red-font");
+    weekDayElement.classList.add("red-font");
 }
 
-let mainElement = document.querySelector("main");
 switch (month + 1) {
     case 12:
     case 1:

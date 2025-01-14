@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Główna</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/grid.css">
+</head>
+<body>
+    <header>
+        <div id="banner">
+            <img src="../media/controller.png" alt="Logo platformy do grania" id="logo">
+            <h1 id="headerBanner" onmouseover="changeTextIn()" onmouseleave="changeTextOut()">Strona o grach</h1>
+        </div>
+        <menu>
+            <li><a class="btn" href="../pages/home.html">Strona Główna</a></li>
+            <li><a class="btn" href="../pages/gallery.html">Galeria</a></li>
+            <li><a class="btn" href="../pages/form.html">Formularz</a></li>
+            <li><a class="btn" href="../pages/rating.html">Ocena</a></li>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <div id="grid">
+                <div><img onclick="turnPreviewOn(this.src)" src="../media/EldenRing.jpg" alt="Elden Ring"></div>
+                <div><img onclick="turnPreviewOn(this.src)" src="../media/ZeldaTOTK.jpg" alt="The Legend of Zelda: Tears of the Kingdom"></div>
+                <div><img onclick="turnPreviewOn(this.src)" src="../media/DiscoElysium.webp" alt="Disco Elysium"></div>
+                <div><img onclick="turnPreviewOn(this.src)" src="../media/BaldursGate3.jpg" alt="Baldur's Gate 3"></div>
+                <div><img onclick="turnPreviewOn(this.src)" src="../media/StardewValley.png" alt="Stardew Valley"></div>
+                <div><img onclick="turnPreviewOn(this.src)" src="../media/Witcher3.jpg" alt="The Witcher 3: Wild Hunt"></div>
+                <div><img onclick="turnPreviewOn(this.src)" src="../media/Factorio.png" alt="Factorio"></div>
+                <div><img onclick="turnPreviewOn(this.src)" src="../media/ZeldaBOTW.jpg" alt="The Legend of Zelda: Breath of the Wild"></div>
+                <div><img onclick="turnPreviewOn(this.src)" src="../media/DarkSouls3.jpg" alt="Dark Souls 3"></div>
+            </div>
+            <div id="preview-bg" onclick="turnPreviewOff(this)"></div>
+            <img id="preview-img" src="../media/controller.png" alt="Image Preview">
+        </article>
+    </main>
+    <footer>
+        <div id="author">Stronę wykonał: Aleksander Owsiński</div>
+        <div id="clock"></div>
+        <script src="../scripts/clock.js" defer></script>
+    </footer>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/logo.js"></script>
+    <script src="../scripts/preview.js"></script>
+</body>
+</html>

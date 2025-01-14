@@ -14,7 +14,9 @@ function updateClock(){
     clock.innerHTML += day+" ";
     clock.innerHTML += monthsName[month]+" ";
     clock.innerHTML += year+" ";
-    clock.innerHTML += hour+":"+minutes+":"+seconds;
+    clock.innerHTML += (hour < 10 ? '0' : '') + hour + ":";
+    clock.innerHTML += (minutes < 10 ? '0' : '') + minutes + ":";
+    clock.innerHTML += (seconds < 10 ? '0' : '') + seconds;
     setTimeout(updateClock, 1000);
 }
 updateClock()

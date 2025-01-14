@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Główna</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/calculator.css">
+</head>
+<body>
+    <header>
+        <div id="banner">
+            <img src="../media/controller.png" alt="Logo platformy do grania" id="logo">
+            <h1 id="headerBanner" onmouseover="changeTextIn()" onmouseleave="changeTextOut()">Strona o grach</h1>
+        </div>
+        <menu>
+            <li><a class="btn" href="../pages/home.html">Strona Główna</a></li>
+            <li><a class="btn" href="../pages/gallery.html">Galeria</a></li>
+            <li><a class="btn" href="../pages/form.html">Formularz</a></li>
+            <li><a class="btn" href="../pages/rating.html">Ocena</a></li>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <form id="gameForm">
+                <div class="question">
+                    <p><strong>1. Jaki rodzaj rozgrywki preferujesz?</strong></p>
+                    <label><input type="radio" name="q1" value="A"> Otwarty świat i eksploracja</label><br>
+                    <label><input type="radio" name="q1" value="B"> Wciągająca fabuła</label><br>
+                    <label><input type="radio" name="q1" value="C"> Dynamiczna akcja i adrenalina</label><br>
+                    <label><input type="radio" name="q1" value="D"> Kreatywność i budowanie</label>
+                </div>
+
+                <div class="question">
+                    <p><strong>2. Jakie uniwersum najbardziej Cię interesuje?</strong></p>
+                    <label><input type="radio" name="q2" value="A"> Fantasy</label><br>
+                    <label><input type="radio" name="q2" value="B"> Sci-fi</label><br>
+                    <label><input type="radio" name="q2" value="C"> Realistyczne lub historyczne</label><br>
+                    <label><input type="radio" name="q2" value="D"> Postapokaliptyczne</label>
+                </div>
+                <br>
+                <button type="button" class="btn" onclick="calculateResult()">Pokaż moją grę!</button>
+            </form>
+            <div id="result" class="result"></div>
+        </article>
+    </main>
+    <footer>
+        <div id="author">Stronę wykonał: Aleksander Owsiński</div>
+        <div id="clock"></div>
+        <script src="../scripts/clock.js" defer></script>
+    </footer>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/logo.js"></script>
+    <script src="../scripts/calculator.js"></script>
+</body>
+</html>

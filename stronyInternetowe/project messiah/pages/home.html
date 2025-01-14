@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +9,29 @@
 <body>
     <header>
         <div id="banner">
-            <img src="../media/omnissiah_logo.png" alt="Logo Omnisjasza" id="logo">
-            <h1 id="prayer" onmouseover="changeToPolish()" onmouseleave="changeToLatin()">Ab imbecillitate animi, Omnissiah salva nos</h1>
+            <img src="../media/controller.png" alt="Logo platformy do grania" id="logo">
+            <h1 id="headerBanner" onmouseover="changeTextIn()" onmouseleave="changeTextOut()">Strona o grach</h1>
         </div>
         <menu>
-            <li><a href="../pages/home.html">Strona Główna</a></li>
-            <li><a href="../pages/gallery.html">Galeria</a></li>
-            <li><a href="../pages/form.html">Formularz</a></li>
-            <li><a href="../pages/rating.html">Ocena</a></li>
+            <li><a class="btn" href="../pages/home.html">Strona Główna</a></li>
+            <li><a class="btn" href="../pages/gallery.html">Galeria</a></li>
+            <li><a class="btn" href="../pages/form.html">Formularz</a></li>
+            <li><a class="btn" href="../pages/rating.html">Ocena</a></li>
         </menu>
     </header>
     <main>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime hic, maiores perferendis perspiciatis veniam
-            minus error ratione ab cumque nisi aspernatur laboriosam ipsam pariatur quisquam veritatis delectus saepe unde! Fugiat.
-        </p>
+        <article>
+            Witaj w miejscu, gdzie świętujemy wyjątkowe chwile w świecie gier! Ostatnia dekada przyniosła nam niesamowite produkcje, które na nowo zdefiniowały rozrywkę, emocje i możliwości interakcji z wirtualnym światem.
+            Od epickich RPG-ów i wciągających strzelanek po niezależne arcydzieła – każda z tych gier miała wpływ na miliony graczy na całym świecie. To tutaj przypomnisz sobie najważniejsze tytuły, poznasz ich historię i dowiesz się, co sprawiło, że zdobyły miejsce w sercach fanów.
+            Przejrzyj nasz ranking, odkryj ulubione momenty i pozwól nam poprowadzić Cię w podróż przez najwspanialsze gry ostatnich 10 lat.
+        </article>
     </main>
     <footer>
         <div id="author">Stronę wykonał: Aleksander Owsiński</div>
         <div id="clock"></div>
         <script src="../scripts/clock.js" defer></script>
     </footer>
-    <script src="../scripts/prayer.js"></script>
+    <script src="../scripts/header.js"></script>
     <script src="../scripts/logo.js"></script>
 </body>
 </html>

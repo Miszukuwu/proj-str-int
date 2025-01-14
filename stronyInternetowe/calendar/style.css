@@ -91,3 +91,6 @@ main{
 .red-font{
     color: #fd3a3a;
 }
+#banner, #footer{
+    box-shadow: 0px 0px 10px black;
+}
