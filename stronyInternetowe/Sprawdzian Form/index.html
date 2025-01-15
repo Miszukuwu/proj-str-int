@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kupno Stołu</title>
+</head>
+<body>
+    <h2>Kupno stołu</h2>
+    <form name="form">
+        <label for="width">Podaj szerokość</label>
+        <input type="number" id="width" name="width" required>m<br>
+        <label for="length">Podaj długość</label>
+        <input type="number" name="length" id="length" required>m<br>
+        <label for="material">Wybierz materiał </label>
+        <select name="material" id="material"></select><br>
+        <label for="leg">Wybierz wysokość nóg</label><br>
+        <input type="radio" name="leg" id="70cm" value="70" required>
+        <label for="70cm">70 cm</label>
+        <input type="radio" name="leg" id="90cm" value="90" required>
+        <label for="90cm">90 cm</label><br>
+        <label for="dodatki">Dodatki </label>
+        <select name="dodatki" id="dodatki" multiple>
+            <option value="obrus">obrus</option>
+            <option value="serwetki">serwetki</option>
+            <option value="świeca">świeca</option>
+            <option value="filiżanka">filiżanka</option>
+            <option value="cukiernica">cukiernica</option>
+        </select><br>
+        <label for="delivery">Dowóz</label>
+        <input type="checkbox" name="delivery" id="delivery"><br>
+        <button type="button" onclick="calculate()">Wyznacz cenę</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        let materials = {"pilśń":50, "drewno":100,"szkło":80,"kamień":150}
+        for (let material in materials){
+            document.getElementById('material').innerHTML += "<option value='"+material+"'>"+material+"</option>";
+        }
+        function calculate(){
+            let result = document.getElementById('result');
+            let width = document.form.width.value;
+            let length = document.form.length.value;
+            let material = document.form.material.value;
+            let legLength = document.form.leg.value;
+            let dodatki = document.form.dodatki.selectedOptions;
+            let delivery = document.form.delivery.checked;
+            if (width==''||length==''||material==''||legLength=='') {
+                result.innerHTML = "Proszę podać wszystkie dane";
+                return;
+            }
+            let tablePrice = width*length*materials[material];
+            if (legLength == 90) {
+                tablePrice += 100;
+            }
+            result.innerHTML = "Stół: <br>";
+            result.innerHTML += "wymiary: "+width+"m x "+length+"m<br>";
+            result.innerHTML += "powierzchnia: "+width*length+" m^2<br>";
+            result.innerHTML += "wysokość nóg: "+legLength+" cm<br>";
+            result.innerHTML += "dodatki: ";
+            for (let i = 0; i < dodatki.length; i++){
+                result.innerHTML += dodatki[i].value;
+                if (i!=dodatki.length-1){
+                    result.innerHTML += ", ";
+                } else {
+                    result.innerHTML += "<br>";
+                }
+            }
+            result.innerHTML += "cena stołu: "+tablePrice+" zł<br>";
+            result.innerHTML += "dowóz: ";
+            if (delivery){
+                result.innerHTML += "TAK<br>";
+                tablePrice += 50;
+            } else {
+                result.innerHTML += "NIE<br>";
+            }
+            result.innerHTML += "Całkowity koszt: "+tablePrice+" zł";
+        }
+    </script>
+</body>
+</html>

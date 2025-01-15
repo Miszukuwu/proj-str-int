@@ -22,11 +22,11 @@ function previewRatingOff(rating){
         ratingContainer.children.item(i).src = '../media/EmptyStar.png'
     }
 }
-function sendRating(rating){
+function sendRating(){
     let ratingMessage = document.getElementById('rating-message');
     ratingMessage.style.display = 'block';
-    ratingMessage.innerHTML = 'Ocena została przesłana.';
-    if (rating === 5){
+    ratingMessage.innerHTML = 'Ocena została przesłana.<br>';
+    if (currentRating === 5){
         ratingMessage.innerHTML += ' Dziękuje za pozytywną ocenę'
     }
 }
