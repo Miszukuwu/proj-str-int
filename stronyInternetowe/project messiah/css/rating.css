@@ -1,0 +1,14 @@
+#rating-container{
+    overflow: visible;
+}
+#rating-message{
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid rgba(var(--Accent), 1);
+    border-radius: 10px;
+}
+.star{
+    cursor: pointer;
+    width: 10vw;
+}

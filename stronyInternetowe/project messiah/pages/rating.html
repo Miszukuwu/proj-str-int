@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona Główna</title>
     <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/rating.css">
 </head>
 <body>
     <header>
@@ -21,7 +22,15 @@
     </header>
     <main>
         <article>
-<!--            // TODO: ADD RATING SYSTEM-->
+            <div id="rating-container">
+                <img src="../media/EmptyStar.png" alt="Pusta Gwiazdka" onclick="setRating(1)" onmouseover="previewRatingOn(1)" onmouseleave="previewRatingOff(1)" class="star">
+                <img src="../media/EmptyStar.png" alt="Pusta Gwiazdka" onclick="setRating(2)" onmouseover="previewRatingOn(2)" onmouseleave="previewRatingOff(2)" class="star">
+                <img src="../media/EmptyStar.png" alt="Pusta Gwiazdka" onclick="setRating(3)" onmouseover="previewRatingOn(3)" onmouseleave="previewRatingOff(3)" class="star">
+                <img src="../media/EmptyStar.png" alt="Pusta Gwiazdka" onclick="setRating(4)" onmouseover="previewRatingOn(4)" onmouseleave="previewRatingOff(4)" class="star">
+                <img src="../media/EmptyStar.png" alt="Pusta Gwiazdka" onclick="setRating(5)" onmouseover="previewRatingOn(5)" onmouseleave="previewRatingOff(5)" class="star">
+            </div>
+            <button type="button" class="btn">Prześlij</button>
+            <div id="rating-message">Ocena została przesłana.</div>
         </article>
     </main>
     <footer>
@@ -31,5 +40,6 @@
     </footer>
     <script src="../scripts/header.js"></script>
     <script src="../scripts/logo.js"></script>
+    <script src="../scripts/rating.js"></script>
 </body>
 </html>

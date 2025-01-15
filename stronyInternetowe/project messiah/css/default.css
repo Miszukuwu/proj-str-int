@@ -18,10 +18,10 @@ body {
     font-size: 1.1rem;
 }
 header{
-    background-color: rgba(var(--Primary), 0.1);
+    background-color: rgba(var(--Primary), 0.25);
     border-bottom: 1px rgba(var(--Text), 0.4) solid;
     padding: 10px;
-    height: 20vh;
+    height: fit-content;
 }
 #banner{
     display: flex;
@@ -74,7 +74,7 @@ article {
     height: fit-content;
     padding: 1em 2em;
     font-size: 2rem;
-    background-color: rgba(var(--Primary), 0.1);
+    background-color: rgba(var(--Primary), 0.25);
     border-radius: 40px;
     display: flex;
     flex-direction: column;
