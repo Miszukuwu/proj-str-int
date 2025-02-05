@@ -1,0 +1,59 @@
+body{
+    font-family: Helvetica;
+    background-color: #eeeeee;
+}
+main{
+    width: 90%;
+    margin: auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header #logo{
+    background-color: lightblue;
+    height: 100px;
+    width: 50%;
+    padding: 0 10px 0 10px;
+}
+nav{
+    background-color: lightblue;
+    height: 100px;
+    width: 50%;
+    padding: 0 10px 0 10px;
+    display: flex;
+    justify-content: row;
+}
+nav li{
+    color: Navy;
+    font-size: 150%;
+    font-weight: bold;
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+}
+nav li a{
+    text-decoration: none;
+}
+nav li a:hover{
+    border: solid 1px Navy;
+}
+#banner{
+    background-color: #DDDDDD;
+    height: 200px;
+}
+article{
+    color: Navy;
+    margin: 50px;
+    height: 400px;
+}
+button{
+    background-color: lightblue;
+    color: Navy;
+}
+footer{
+    text-align: right;
+    background-color: lightblue;
+    padding: 10px;
+}

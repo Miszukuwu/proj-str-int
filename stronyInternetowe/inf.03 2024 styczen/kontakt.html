@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma IT</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div id="logo">
+                <img src="logo.png" alt="firma it">
+            </div>            
+            <nav>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="uslugi.html">Usługi</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </nav>
+        </header>
+        <div id="banner">
+            <img src="animacja.gif" alt="Usługi informatyczne">
+        </div>
+        <article>
+            <h2>Kontakt</h2>
+            <table>
+                <form name="zgloszenie">
+                    <tr>
+                        <td>Imię: </td>
+                        <td><input type="text" name="imie" id="imie"></td>
+                    </tr>
+                    <tr>
+                        <td>Nazwisko: </td>
+                        <td><input type="text" name="nazwisko" id="nazwisko"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail: </td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Zgłoszenie </td>
+                        <td><textarea name="zgloszenie" id="zgloszenie" cols="40" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="checkbox" name="regulamin" id="regulamin"> Zapoznałam/em się z regulaminem</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="reset">Resetuj</button><button onclick="send()" type="button">Prześlij</button></td>
+                    </tr>
+                </form>
+            </table>
+            <hr>
+            <p id="result"></p>
+        </article>
+        <footer>
+            Autor strony: <strong>1234567890</strong>
+        </footer>
+    </main>
+    <script>
+    function send(){
+        let resultElement = document.getElementById("result");
+        if (!document.zgloszenie.regulamin.checked){
+            resultElement.innerHTML = "Muszisz zapoznać się z regulaminem";
+            resultElement.style.color = "red";
+            return;
+        }
+        let imie = document.zgloszenie.imie.value;
+        let nazwisko = document.zgloszenie.nazwisko.value;
+        let zgloszenie = document.zgloszenie.zgloszenie.value;
+        resultElement.style.color = "inherit";
+        resultElement.innerHTML = imie.toUpperCase()+" "+nazwisko.toUpperCase()+"<br>Treść twojej sprawy: "+zgloszenie;
+    }
+    </script>
+</body>
+
+</html>
