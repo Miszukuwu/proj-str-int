@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciągi liczbowe</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <div id="banner1"><h2>Poznaj Ciągi Liczbowe</h2></div>
+    <div id="banner4"><img src="obraz1.png" alt="Fibonacci"></div>
+    <div id="banner3"><a href="fib.html"><h5>Ciąg Fibonacciego</h5></a></div>
+    <div id="banner2"><a href="liczby.html"><h5>Ciągi Arytmetyczne</h5></a></div>
+    <section id="left">
+        <ol>
+            <li>ciągi arytmetyczne</li>
+            <li>ciągi geometryczne</li>
+            <li>ciąg Fibonacciego</li>
+        </ol>
+    </section>
+    <section id="right">
+        <h2>Generowanie ciągu arytmetycznego</h2>
+        <label for="pierwszy">Pierwszy wyraz A1: </label>
+        <input type="number" name="pierwszy" id="pierwszy"><br>
+        <label for="roznica">Różnica ciągu R: </label>
+        <input type="number" name="roznica" id="roznica"><br>
+        <label for="liczba">Liczba wyrazów w ciągu N: </label>
+        <input type="number" name="liczba" id="liczba"><br>
+        <button onclick="generujCiag()">Generuj Ciąg</button>
+        <p id="wynik"></p>
+        <script>
+            function generujCiag() {
+                let A1 = document.getElementById("pierwszy").value*1;
+                let R = document.getElementById("roznica").value*1;
+                let N = document.getElementById("liczba").value*1;
+                document.getElementById("wynik").innerHTML = "Ciąg arytmetyczny zawiera wyrazy: ";
+                for (let i = 0; i < N; i++){
+                    document.getElementById("wynik").innerHTML += A1 + ", ";
+                    A1 += R;
+                }
+            }
+        </script>
+    </section>
+    <footer><p>Autor: 1234567890</p></footer>
+</body>
+</html>
