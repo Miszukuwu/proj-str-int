@@ -1,0 +1,8 @@
+kwerenda 1:
+SELECT `klienci`.`imie`, `klienci`.`nazwisko`, `klienci`.`punkty` FROM `klienci` ORDER BY `klienci`.`punkty` DESC LIMIT 3;
+kwerenda 2:
+SELECT `typy`.`nazwa`, COUNT(`klienci`.`Typy_id`) FROM `typy` LEFT JOIN `klienci` ON `typy`.`id`=`klienci`.`Typy_id` GROUP BY `typy`.`id`; 
+kwerenda 3:
+SELECT `klienci`.`zdjecie`, `klienci`.`imie`, `opinie`.`opinia` FROM `klienci` JOIN `opinie` ON `klienci`.`id`=`opinie`.`Klienci_id` WHERE `klienci`.`Typy_id` IN (2,3); 
+kwerenda 4:
+ALTER TABLE `klienci` ADD COLUMN `adres` VARCHAR(50);
