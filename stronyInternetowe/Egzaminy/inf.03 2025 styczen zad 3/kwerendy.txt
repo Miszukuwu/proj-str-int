@@ -1,0 +1,4 @@
+SELECT `imieniny`.`data` FROM `imieniny` WHERE `imieniny`.`imiona` LIKE '%Karola%'; 
+SELECT `imieniny`.`imiona` FROM `imieniny` WHERE `data`='05-04';
+SELECT COUNT(*) FROM `imieniny` WHERE `imieniny`.`imiona` LIKE '%mir%';
+ALTER TABLE `imieniny` ADD COLUMN `zyczenia` VARCHAR(500);
