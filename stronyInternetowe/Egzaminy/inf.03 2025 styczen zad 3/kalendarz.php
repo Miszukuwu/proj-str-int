@@ -18,7 +18,7 @@
             $queryResult = mysqli_query($conn, $query);
             $row = mysqli_fetch_assoc($queryResult);
             $daysArr = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
-            $message = "Dzisiaj jest ".$daysArr[date("N")].", ".date("d-n-Y").", imieniny: ".$row['imiona'];
+            $message = "Dzisiaj jest ".$daysArr[date("w")].", ".date("d-n-Y").", imieniny: ".$row['imiona'];
             echo $message;
             mysqli_close($conn);
             ?>
